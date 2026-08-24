@@ -216,3 +216,7 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_history_button_pressed() -> void:
+	$Balloon/DialogueHistory.visible = not $Balloon/DialogueHistory.visible
