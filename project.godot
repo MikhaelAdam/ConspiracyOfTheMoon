@@ -19,12 +19,21 @@ config/icon="res://Assets/Images/icon.svg"
 
 EventBus="*uid://c3xsbf2as6iql"
 Inventory="*uid://4bp2dl2llvjo"
+DialogueManager="*uid://c3rodes2l3gxb"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://Scenes/Baloons/balloon.tscn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=1024
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [physics]
 

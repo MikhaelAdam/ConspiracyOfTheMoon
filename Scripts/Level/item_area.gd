@@ -7,10 +7,9 @@ var is_picked: bool = false
 
 func _input(event: InputEvent) -> void:
 	if is_hovered and event is InputEventMouseButton and event.pressed and not is_picked:
-		print("Item picked: %s" % item_resource.item_name)
-		# is_picked = true
-		# item_resource.is_in_inventory = true
-		# EventBus._item_picked.emit(item_resource)
+		is_picked = true
+		item_resource.is_in_inventory = true
+		EventBus._item_picked.emit(item_resource)
 
 func _enter_tree() -> void:
 	self.mouse_entered.connect(self._on_mouse_entered)
