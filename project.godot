@@ -15,10 +15,16 @@ run/main_scene="uid://bmqlfx5owsyqk"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://Assets/Images/icon.svg"
 
+[autoload]
+
+EventBus="*uid://c3xsbf2as6iql"
+Inventory="*uid://4bp2dl2llvjo"
+
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/size/viewport_width=1280
+window/size/viewport_height=1024
+window/stretch/mode="viewport"
 
 [physics]
 
