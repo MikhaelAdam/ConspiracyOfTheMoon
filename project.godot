@@ -20,6 +20,7 @@ config/icon="res://Assets/Images/icon.svg"
 EventBus="*uid://c3xsbf2as6iql"
 Inventory="*uid://4bp2dl2llvjo"
 DialogueManager="*uid://c3rodes2l3gxb"
+GameState="*uid://dr6plqiv673r5"
 
 [dialogue_manager]
 
