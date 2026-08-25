@@ -1,6 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://chqpcj2xebxfu"]
 
 [ext_resource type="FontFile" uid="uid://c63g8q3n8smp5" path="res://Assets/Fonts/CormorantGaramond-VariableFont_wght.ttf" id="1_ylbt1"]
+[ext_resource type="FontFile" uid="uid://6n1cadvhxkgl" path="res://Assets/Fonts/CormorantGaramond/CormorantGaramond-Bold.ttf" id="2_0isac"]
+[ext_resource type="FontFile" uid="uid://cu5o2wiqljmvv" path="res://Assets/Fonts/CormorantGaramond/CormorantGaramond-BoldItalic.ttf" id="3_h8tdg"]
+[ext_resource type="FontFile" uid="uid://prutk28pg4v4" path="res://Assets/Fonts/CormorantGaramond/CormorantGaramond-Italic.ttf" id="4_j8jw4"]
+[ext_resource type="FontFile" uid="uid://bhchks8l0fkee" path="res://Assets/Fonts/CormorantGaramond/CormorantGaramond-Light.ttf" id="5_j440u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 content_margin_left = 20.0
@@ -69,8 +73,15 @@ Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
 Button/styles/normal = SubResource("StyleBoxFlat_e0njw")
+Label/fonts/font = ExtResource("1_ylbt1")
 MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
+RichTextLabel/font_sizes/normal_font_size = 18
+RichTextLabel/fonts/bold_font = ExtResource("2_0isac")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_h8tdg")
+RichTextLabel/fonts/italics_font = ExtResource("4_j8jw4")
+RichTextLabel/fonts/mono_font = ExtResource("5_j440u")
+RichTextLabel/fonts/normal_font = ExtResource("1_ylbt1")

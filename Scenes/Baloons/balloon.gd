@@ -219,4 +219,4 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 func _on_history_button_pressed() -> void:
-	$Balloon/DialogueHistory.visible = not $Balloon/DialogueHistory.visible
+	%DialogueHistory.visible = not %DialogueHistory.visible

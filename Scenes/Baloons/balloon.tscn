@@ -43,7 +43,7 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
+[node name="DefaultBalloon" type="CanvasLayer" unique_id=38036521]
 layer = 100
 script = ExtResource("1_36de5")
 
@@ -114,6 +114,39 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
+[node name="DialogueHistory" type="MarginContainer" parent="Balloon" unique_id=366941711]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 800.0
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_2it2l")
+theme_override_constants/margin_top = 67
+script = ExtResource("4_fx8t6")
+
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/DialogueHistory" unique_id=2026613744]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Balloon/DialogueHistory/PanelContainer" unique_id=934875667]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/DialogueHistory/PanelContainer/ScrollContainer" unique_id=2071582921]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DialogueContainer" type="RichTextLabel" parent="Balloon/DialogueHistory/PanelContainer/ScrollContainer/MarginContainer" unique_id=1217092530]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+
 [node name="CenterContainer" type="CenterContainer" parent="Balloon" unique_id=1087901387]
 layout_mode = 1
 anchors_preset = 15
@@ -135,45 +168,18 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
-[node name="DialogueHistory" type="MarginContainer" parent="Balloon" unique_id=366941711]
-layout_mode = 1
-anchors_preset = 15
+[node name="HistoryDock" type="MarginContainer" parent="." unique_id=264603511]
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 153.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 833
-theme_override_constants/margin_bottom = 201
-script = ExtResource("4_fx8t6")
+theme = ExtResource("2_2it2l")
+theme_override_constants/margin_bottom = 83
 
-[node name="PanelContainer" type="PanelContainer" parent="Balloon/DialogueHistory" unique_id=2026613744]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Balloon/DialogueHistory/PanelContainer" unique_id=934875667]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Balloon/DialogueHistory/PanelContainer/ScrollContainer" unique_id=2071582921]
-layout_mode = 2
-
-[node name="DialogueContainer" type="VBoxContainer" parent="Balloon/DialogueHistory/PanelContainer/ScrollContainer/MarginContainer" unique_id=1200193862]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="Balloon" unique_id=264603511]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 838.0
-offset_right = 1217.0
-offset_bottom = 991.0
-theme_override_constants/margin_top = -10
-theme_override_constants/margin_bottom = 113
-
-[node name="HistoryButton" type="Button" parent="Balloon/MarginContainer2" unique_id=1732115998]
+[node name="HistoryButton" type="Button" parent="HistoryDock" unique_id=1732115998]
 layout_mode = 2
 size_flags_horizontal = 8
+focus_mode = 0
 text = "History"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
@@ -183,4 +189,4 @@ unique_name_in_owner = true
 [connection signal="started_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="Balloon/DialogueHistory" method="_on_dialogue_label_started_typing"]
 [connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
 [connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="Balloon/DialogueHistory" method="_on_responses_menu_response_selected"]
-[connection signal="pressed" from="Balloon/MarginContainer2/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="HistoryDock/HistoryButton" to="." method="_on_history_button_pressed"]
