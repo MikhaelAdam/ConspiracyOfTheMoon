@@ -1,11 +1,11 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue. [ID:5km1c6ox3vop_eae868]
+Nathan: Here are some choices. [ID:5km1c6ox3vop_20be13]
+- First one [ID:5km1c6ox3vop_a84824]
+	Nathan: You picked the first one. [ID:5km1c6ox3vop_63d02f]
+- Second one [ID:5km1c6ox3vop_f5aa85]
+	Nathan: You picked the second one. [ID:5km1c6ox3vop_2da2b3]
+- Start again [ID:5km1c6ox3vop_deb9be] => start
+- End the conversation [ID:5km1c6ox3vop_7d6db2] => END
+Nathan: For more information see the online documentation. [ID:5km1c6ox3vop_ba55c0]
 => END
