@@ -2,12 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsnj888dgye6v" path="res://Scripts/Managers/room_manager.gd" id="1_nn43k"]
 [ext_resource type="Script" uid="uid://bjh2majnffcgj" path="res://Scripts/Level/room.gd" id="2_xkc2l"]
-[ext_resource type="Script" uid="uid://dqd5s47sru3cv" path="res://Scripts/Level/item_area.gd" id="3_73spc"]
-[ext_resource type="Script" uid="uid://ckf1v3kvlxhbe" path="res://Scripts/Resource/item_resource.gd" id="4_o1338"]
-
-[sub_resource type="Resource" id="Resource_5h11f"]
-script = ExtResource("4_o1338")
-metadata/_custom_type_script = "uid://ckf1v3kvlxhbe"
 
 [node name="SceneManager" type="Node2D" unique_id=539109440]
 
@@ -19,8 +13,3 @@ metadata/_custom_type_script = "uid://dsnj888dgye6v"
 position = Vector2(-2, 0)
 script = ExtResource("2_xkc2l")
 metadata/_custom_type_script = "uid://bjh2majnffcgj"
-
-[node name="ItemArea" type="Area2D" parent="RoomManager/RoomStart" unique_id=587864263]
-script = ExtResource("3_73spc")
-item_resource = SubResource("Resource_5h11f")
-metadata/_custom_type_script = "uid://dqd5s47sru3cv"

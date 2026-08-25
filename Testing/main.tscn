@@ -1,28 +1,24 @@
 [gd_scene format=3 uid="uid://bmqlfx5owsyqk"]
 
 [ext_resource type="Script" uid="uid://du50s2hvugto3" path="res://Testing/main.gd" id="1_riuig"]
-[ext_resource type="Script" uid="uid://dqd5s47sru3cv" path="res://Scripts/Level/item_area.gd" id="2_xn4c8"]
-[ext_resource type="Texture2D" uid="uid://dhcwb0k260tag" path="res://Assets/Images/icon.svg" id="3_2pwtk"]
-[ext_resource type="Script" uid="uid://ckf1v3kvlxhbe" path="res://Scripts/Resource/item_resource.gd" id="3_xn4c8"]
+[ext_resource type="Script" uid="uid://o6bxgwthtxt6" path="res://Scripts/Level/actionable.gd" id="2_riuig"]
+[ext_resource type="Script" uid="uid://1ai1j752hk0d" path="res://Scripts/Components/dialogue_component.gd" id="3_2pwtk"]
+[ext_resource type="Resource" uid="uid://5km1c6ox3vop" path="res://Resources/Dialogue/test.dialogue" id="4_e73sh"]
 
-[sub_resource type="Resource" id="Resource_f8bef"]
-script = ExtResource("3_xn4c8")
-item_name = "Penis"
-item_description = "Its a penis"
-item_icon = ExtResource("3_2pwtk")
-metadata/_custom_type_script = "uid://ckf1v3kvlxhbe"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
-size = Vector2(102, 84)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx8n8"]
+size = Vector2(148, 106)
 
 [node name="Main" type="Node2D" unique_id=1592781464]
 script = ExtResource("1_riuig")
 
-[node name="ItemArea" type="Area2D" parent="." unique_id=1351559399]
-position = Vector2(522, 290)
-script = ExtResource("2_xn4c8")
-item_resource = SubResource("Resource_f8bef")
-metadata/_custom_type_script = "uid://dqd5s47sru3cv"
+[node name="Actionable" type="Area2D" parent="." unique_id=178757771]
+position = Vector2(383, 224)
+script = ExtResource("2_riuig")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemArea" unique_id=1928848373]
-shape = SubResource("RectangleShape2D_5h11f")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1902051227]
+shape = SubResource("RectangleShape2D_bx8n8")
+
+[node name="DialogueComponent" type="Node" parent="Actionable" unique_id=1036600174 node_paths=PackedStringArray("actionable")]
+script = ExtResource("3_2pwtk")
+dialogue = ExtResource("4_e73sh")
+actionable = NodePath("..")

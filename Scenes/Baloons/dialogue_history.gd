@@ -4,7 +4,7 @@ const FONT = preload("res://Assets/Fonts/CormorantGaramond-VariableFont_wght.ttf
 
 func _ready() -> void:
 	clear_history()
-	DialogueManager.dialogue_ended.connect(func() -> void:
+	DialogueManager.dialogue_ended.connect(func(_resource: DialogueResource) -> void:
 		clear_history()
 	)
 
