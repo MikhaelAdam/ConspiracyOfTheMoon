@@ -1,8 +1,17 @@
 extends Node2D
 class_name Room
 
-var room_name: String = self.name
+signal _room_entered(room: Room)
+signal _room_exited(room: Room)
 
-func _ready() -> void:
+var is_player_inside: bool = false
+
+func enter_room() -> void:
+    is_player_inside = true
+    show()
+    _room_entered.emit(self)
+
+func exit_room() -> void:
+    is_player_inside = false
     hide()
-
+    _room_exited.emit(self)

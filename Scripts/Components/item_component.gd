@@ -1,3 +1,4 @@
+# For items that can be grabbed via actionable
 extends Node
 class_name ItemComponent
 

@@ -1,3 +1,4 @@
+# Component for managing the dialogue needed for a specific actionable
 class_name DialogueComponent extends Node
 
 @export var dialogue: DialogueResource
